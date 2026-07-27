@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Łowio - aplikacja dla wędkarzy</title>
+    <meta
+      name="description"
+      content="Łowio pomaga wędkarzom znajdować łowiska, zapisywać połowy, dodawać znaczniki i dzielić się wpisami ze społecznością."
+    >
+    <meta property="og:title" content="Łowio - Twoje łowiska, twoje połowy">
+    <meta
+      property="og:description"
+      content="Mapa łowisk, historia połowów, znaczniki i społeczność wędkarska w jednej aplikacji."
+    >
+    <meta property="og:image" content="assets/banner.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Łowio">
+        <img src="assets/icon.png" alt="" width="44" height="44">
+        <span>Łowio</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Główne menu">
+        <a href="#funkcje">Funkcje</a>
+        <a href="#demo">Ekrany</a>
+        <a href="#spolecznosc">Społeczność</a>
+      </nav>
+
+      <a class="header-action" href="#demo">Zobacz aplikację</a>
+
+      <button class="menu-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobilne" hidden>
+      <a href="#funkcje">Funkcje</a>
+      <a href="#demo">Ekrany</a>
+      <a href="#spolecznosc">Społeczność</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/banner.png" alt="Łowio - aplikacja dla wędkarzy z mapą łowisk i ekranami telefonu">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Aplikacja dla wędkarzy</p>
+          <h1 id="hero-title">Łowio</h1>
+          <p class="hero-copy">
+            Znajduj łowiska, zapisuj połowy i wracaj do miejsc, które naprawdę pracują nad wodą.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#demo">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 18l6-6-6-6"></path>
+              </svg>
+              Zobacz ekrany
+            </a>
+            <a class="button button-secondary" href="#funkcje">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20V10M18 20V4M6 20v-6"></path>
+              </svg>
+              Funkcje
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="funkcje" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">W terenie i po wyprawie</p>
+          <h2 id="features-title">Wszystko, czego potrzebujesz przy łowisku</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Mapa wód</h3>
+            <p>Szybkie wyszukiwanie zbiorników, typy map i filtry dostępu pozwalają znaleźć dobre miejsce bez chaosu.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Znaczniki miejsc</h3>
+            <p>Zapisuj punkty, dodawaj tytuły, notatki i zdjęcia, aby łatwo wrócić do sprawdzonych stanowisk.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Dziennik połowów</h3>
+            <p>Dodawaj gatunki, wagę, długość, komentarze i fotografie. Twoja historia zostaje uporządkowana.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">04</span>
+            <h3>Społeczność</h3>
+            <p>Publikuj wpisy z regionu, reaguj na posty i zobacz, co dzieje się nad pobliskimi wodami.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-section" id="demo" aria-labelledby="demo-title">
+        <div class="demo-copy">
+          <p class="eyebrow">Podgląd produktu</p>
+          <h2 id="demo-title">Mapa, rekordy i wpisy w jednym rytmie</h2>
+          <p>
+            Interfejs Łowio jest zbudowany wokół najczęstszych momentów wyprawy: znalezienia wody,
+            ustawienia znacznika, zapisania połowu i podzielenia się wynikiem.
+          </p>
+          <div class="screen-tabs" role="tablist" aria-label="Ekrany aplikacji">
+            <button class="screen-tab is-active" type="button" role="tab" aria-selected="true" data-screen="0">Mapa</button>
+            <button class="screen-tab" type="button" role="tab" aria-selected="false" data-screen="1">Typ mapy</button>
+            <button class="screen-tab" type="button" role="tab" aria-selected="false" data-screen="2">Filtry</button>
+            <button class="screen-tab" type="button" role="tab" aria-selected="false" data-screen="3">Znacznik</button>
+            <button class="screen-tab" type="button" role="tab" aria-selected="false" data-screen="4">Połów</button>
+            <button class="screen-tab" type="button" role="tab" aria-selected="false" data-screen="5">Rekordy</button>
+          </div>
+        </div>
+
+        <div class="phone-stage" aria-live="polite">
+          <figure class="phone-shell">
+            <img id="screen-preview" src="assets/screen-map.png" alt="Ekran mapy Łowio">
+          </figure>
+        </div>
+      </section>
+
+      <section class="records-section" aria-labelledby="records-title">
+        <div class="records-media">
+          <img src="assets/screen-records.png" alt="Lista zapisanych połowów w aplikacji Łowio">
+        </div>
+        <div class="records-copy">
+          <p class="eyebrow">Twoje rekordy</p>
+          <h2 id="records-title">Każdy połów ma swoją historię</h2>
+          <p>
+            Łowio łączy zdjęcie, lokalizację, gatunek, wagę, długość i notatkę w czytelny zapis.
+            Przy kolejnej wyprawie masz pod ręką wszystko, co było ważne.
+          </p>
+          <ul class="check-list">
+            <li>Wiele gatunków w jednym wpisie</li>
+            <li>Prywatny zapis albo publikacja dla społeczności</li>
+            <li>Szybki powrót do miejsca na mapie</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="community-section" id="spolecznosc" aria-labelledby="community-title">
+        <div class="community-copy">
+          <p class="eyebrow">Silesian Voivodeship</p>
+          <h2 id="community-title">Lokalna aktywność nad wodą</h2>
+          <p>
+            Regionalny feed pomaga odkrywać aktualne relacje, pytania i wyniki innych wędkarzy.
+            To prosty sposób, żeby czuć puls łowisk bez przeładowania informacjami.
+          </p>
+        </div>
+        <div class="community-media">
+          <img src="assets/screen-community.png" alt="Feed społeczności Łowio dla województwa śląskiego">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="assets/icon.png" alt="" width="38" height="38">
+        <span>Łowio</span>
+      </div>
+      <p>Twoje łowiska. Twoje połowy.</p>
+      <small>&copy; <span id="year"></span> Łowio. Strona przygotowana pod GitHub Pages.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
